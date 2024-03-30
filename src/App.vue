@@ -1,6 +1,11 @@
 <template>
   <div class="p-4">
-    <h1 class="text-2xl font-bold mb-4">Pusher ADE</h1>
+    <div class="flex gap-2">
+      <h1 class="text-2xl font-bold mb-4">Pusher ADE</h1>
+      <a href="https://www.github.com/photomz/pusher-ade" target="_blank">
+        <GithubLogoIcon class="w-8 h-8 p-1 text-gray-600" />
+      </a>
+    </div>
     <div class="flex gap-2">
       <div class="flex flex-col gap-2">
         <Input placeholder="Channel Name" v-model="channelId" />
@@ -46,7 +51,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Pusher from "pusher-js";
 import { highlight, languages } from "prismjs";
-import { SymbolIcon as RefreshIcon } from "@radix-icons/vue";
+import { SymbolIcon as RefreshIcon, GithubLogoIcon } from "@radix-icons/vue";
 import "prismjs/components/prism-json";
 
 // Environment variables

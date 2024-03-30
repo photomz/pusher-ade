@@ -1,18 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# 📲 Pusher ADE
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The (unofficial) Postman for Pusher
 
-## Recommended IDE Setup
+<p align="center">
+<img src="public/pusher.svg" width="150" height="150" alt="Pusher ADE Logo">
+</p>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<a href='https://github.com/photomz/pusher-ade'><img src='https://img.shields.io/github/stars/photomz/pusher-ade?style=social'></a>
+<a href='https://pusher.com/docs'><img src='https://img.shields.io/badge/Pusher-Docs-blue'></a>
 
-## Type Support For `.vue` Imports in TS
+Pusher ADE monitors Pusher Channels events for API development and testing in real-time. No existing ADE (Postman, HTTPie, etc) supports Pusher's WebSockets protocol, so we made one.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+It works for chat apps, dashboards, or any app needing live data. It uses Vue, Shadcn UI and Tailwind and subscribes to Pusher Channels for easy real-time communication. It's one `App.vue` file (!!) and _very hackable_ for your needs.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Setup
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+**Install**
+
+```bash
+pnpm install
+```
+
+**Environment Variables**: Create a `.env` file from `.env.sample` and add your Pusher app credentials. You can find these in your [Pusher dashboard](https://dashboard.pusher.com/apps/).
+
+```
+VITE_PUSHER_KEY=YOUR_PUSHER_KEY
+VITE_PUSHER_CLUSTER=YOUR_PUSHER_CLUSTER
+```
+
+Start with HMR
+
+```bash
+pnpm start
+```
