@@ -13,6 +13,10 @@ Pusher ADE monitors Pusher Channels events for API development and testing in re
 
 It works for chat apps, dashboards, or any app needing live data. It uses Vue, Shadcn UI and Tailwind and subscribes to Pusher Channels for easy real-time communication. It's one `App.vue` file (!!) and _very hackable_ for your needs.
 
+<p align="center">
+<img src="public/screenshot.png" height="400" alt="Pusher ADE Screenshot">
+</p>
+
 ## Setup
 
 **Install**
